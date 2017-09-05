@@ -1,4 +1,5 @@
 ﻿using lojaComEntity.Entity;
+using lojaComEntity.Model.Entity;
 using Microsoft.Data.Entity;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,10 @@ namespace lojaComEntity
     // Classe do Entity, que eu criei como EntidadesContext e ela herda de uma Classe "DbContext"
     public class EntidadesContext : DbContext 
     {
-        // Crio uma lista de usario do tipo Dbset com o nome Usuarios; 
+        // Realiza o mapeamento das classes para refletir em entidades 
         public DbSet<Usuario>  Usuarios { get; set; }
+        public DbSet<Categoria> Categorias { get; set; } 
+        public DbSet<Produto> Produtos { get; set; }
 
         // Um metodo que existe na classe pai, a "DbContext" e aqui eu estou usando o "override" para sobreescrever o metodo
         // Com os dados que eu quero, no caso 

@@ -1,4 +1,5 @@
 ﻿using lojaComEntity.Entity;
+using lojaComEntity.Model.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,31 +14,59 @@ namespace lojaComEntity
     {
         static void Main(string[] args)
         {
-            // Instancia os objetos, tanto do Entity quanto o Usuario.
             EntidadesContext contexto = new EntidadesContext();
-            Usuario user = new Usuario();
 
-            // Mostra mensagem na tela e pega a resposta, savlando isso no "Nome".
-            Console.WriteLine("Sistema de cadastro de usuario. \n");
-            Console.WriteLine("Digite seu nome: ");
-            user.Nome = Console.ReadLine();
+            //Salva Produto, informando o ID da categoria 
+            /*Produto p = new Produto()
+            {
+                nome = "Teclado",
+                preco = 20,
+                categoriaID = 1
+            };
+            contexto.Produtos.Add(p);
+            contexto.SaveChanges();*/
 
-            // Pula linha \o/
-            Console.WriteLine("\n");
+            //Busca produto com inner da categoria 
+            //Produto p = contexto.Produtos.Include(Produto => Produto.categoria).FirstOrDefault(produto => produto.ID == 1);
 
-            // Mostra mensagem na tela e pega a resposta, savlando isso no "Senha".
-            Console.WriteLine("Digite sua senha: ");
-            user.Senha = Console.ReadLine();
+            /* Filtrando da categoria 
+            var categoria = contexto.Categorias.Include(c => c.produtos). FirstOrDefault(c => c.ID == 1);
+            foreach (var p in categoria.produtos)
+            {
+                //Console.WriteLine(p.nome);
+            }*/
 
-            // Metodos do objeto "contexto" que foi criado na instancia do "EntidadesContext" que é a
-            // Classe que criei pro entity, lá no começo do codigo 
-            contexto.Usuarios.Add(user);
+
+            /*
+            //Categoria de roupas
+            Categoria c = new Categoria() {
+                nome = "Roupas",
+            };
+            contexto.Categorias.Add(c);
             contexto.SaveChanges();
-            contexto.Dispose();
+           
+            Produto r1 = new Produto()
+            {
+                nome = "Moleton",
+                preco = 50,
+                categoriaID = 2
+            };
+            contexto.Produtos.Add(r1);
+            contexto.SaveChanges();
+            */
 
-            // Mensagem de sucesso e uma pausa, para a tela não fechar direito.
-            Console.WriteLine("Salvou o Usuario");
+            var busca = from p in contexto.Produtos select p;
+            foreach( var produto in busca)
+            {
+                Console.WriteLine(produto.nome);
+            }
+
+
+
+
+            Console.WriteLine("funcionou");
             Console.ReadKey();
-        }   
+
+        }
     }
 }
