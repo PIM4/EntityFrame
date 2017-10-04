@@ -6,11 +6,11 @@ namespace Model.Entity
 	{
 		private Bloco bloco;
 
-		private int identificacao;
+		private string identificacao;
 
-		private int vagas;
+		private int qtVagas;
 
-		private Proprietario proprietario;
+		private Pessoa proprietario;
 
 		public Unidade(Bloco bl)
 		{
@@ -42,14 +42,14 @@ namespace Model.Entity
 			return 0;
 		}
 
-		public void setProprietario(Proprietario pro)
+		public void setProprietario(int pro)
 		{
 
 		}
 
-		public Proprietario getProprietario()
+		public int getProprietario()
 		{
-			return null;
+			return 0;
 		}
 
 	}

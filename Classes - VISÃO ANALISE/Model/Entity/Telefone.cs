@@ -4,9 +4,11 @@ namespace Model.Entity
 {
 	public class Telefone : Pessoa
 	{
-		private string telefone;
+		private string numero;
 
 		private Pessoa pessoa;
+
+		private string descricao;
 
 		public Telefone(string tel, Pessoa p)
 		{

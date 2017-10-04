@@ -12,13 +12,15 @@ namespace Model.Entity
 
 		private string bairro;
 
-		private int cep;
+		private string cep;
 
 		private string cidade;
 
 		private string estado;
 
 		private Pessoa pessoa;
+
+		private string descricao;
 
 		public Endereco(string cep, string log, int n, string b, string c, Pessoa p)
 		{

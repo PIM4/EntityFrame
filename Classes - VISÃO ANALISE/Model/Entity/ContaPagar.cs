@@ -7,7 +7,7 @@ namespace Model.Entity
 	{
 		private TipoConta tipo;
 
-		private Terceiro terceiro;
+		private Fornecedor fornecedor;
 
 		private DateTime data;
 

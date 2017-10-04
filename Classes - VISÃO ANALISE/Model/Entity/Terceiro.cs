@@ -8,6 +8,8 @@ namespace Model.Entity
 
 		private Pessoa pessoa;
 
+		private Fornecedor nomeEmpresa;
+
 		public Terceiro(Pessoa pessoa)
 		{
 

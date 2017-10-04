@@ -9,9 +9,11 @@ namespace Model.Entity
 
 		private Area area;
 
-		private DateTime dtinicio;
+		private DateTime dtInicio;
 
-		private DateTime dtfinal;
+		private DateTime dtFinal;
+
+		private DateTime prevFinalizacao;
 
 		public Obra(TipoObra tipo, Area area, DateTime dtIn)
 		{

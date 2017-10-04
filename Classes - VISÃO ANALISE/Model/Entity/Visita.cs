@@ -1,4 +1,5 @@
 using Model.Entity;
+using System;
 
 namespace Model.Entity
 {
@@ -7,6 +8,10 @@ namespace Model.Entity
 		private Visitante visitante;
 
 		private Unidade unidade;
+
+		private DateTime dtEntrada;
+
+		private DateTime dtSaida;
 
 		public Visita(Visitante visitante, Unidade uni)
 		{

@@ -13,6 +13,8 @@ namespace Model.Entity
 
 		private Unidade unidade;
 
+		private string observacao;
+
 		public ContaReceber(DateTime data, float valor, Unidade uni)
 		{
 

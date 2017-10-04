@@ -6,9 +6,11 @@ namespace Model.Entity
 	{
 		private string nome;
 
-		private int qtandares;
+		private int qtAndares;
 
 		private Condominio condominio;
+
+		private int qtUnidades;
 
 		public Bloco(string nome, int qtand)
 		{

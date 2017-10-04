@@ -9,6 +9,12 @@ namespace Model.Entity
 
 		private Unidade unidade;
 
+		private string descricao;
+
+		private Area area;
+
+		private string responsavel;
+
 		public Evento(DateTime data, int uni)
 		{
 

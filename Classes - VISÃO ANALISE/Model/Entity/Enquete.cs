@@ -1,12 +1,17 @@
+using System.Collections.Generic;
+using System;
+
 namespace Model.Entity
 {
 	public class Enquete
 	{
 		private string pergunta;
 
-		private string voto1;
+		private List OpVotos;
 
-		private string voto2;
+		private DateTime dataInicio;
+
+		private DateTime dataFinal;
 
 		public Enquete(string pergunta)
 		{

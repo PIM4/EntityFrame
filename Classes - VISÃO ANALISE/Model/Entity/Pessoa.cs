@@ -6,15 +6,9 @@ namespace Model.Entity
 	{
 		private string nome;
 
-		private DateTime data_nasc;
-
 		private string rg;
 
-		private string documento;
-
-		private string razaoSocial;
-
-		private string tipoPessoa;
+		private string cpf;
 
 		public Pessoa()
 		{

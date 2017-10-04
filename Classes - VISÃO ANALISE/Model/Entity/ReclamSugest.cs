@@ -4,7 +4,7 @@ namespace Model.Entity
 {
 	public class ReclamSugest
 	{
-		private Pessoa pessoa;
+		private Pessoa autor;
 
 		private string titulo;
 

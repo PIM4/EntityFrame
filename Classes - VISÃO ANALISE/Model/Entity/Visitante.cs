@@ -6,6 +6,8 @@ namespace Model.Entity
 
 		private string rg;
 
+		private string foto;
+
 		public Visitante(string nome, string rg)
 		{
 
